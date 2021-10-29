@@ -12,7 +12,6 @@ conn = psycopg2.connect(database_path, sslmode='require')
 app.config['SQLALCHEMY_DATABASE_URI'] = database_path
 app.config['SECRET_KEY'] = "example"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 db.init_app(app)
 
