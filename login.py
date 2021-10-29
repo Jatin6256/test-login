@@ -6,8 +6,8 @@ import psycopg2
 
 bcrypt = Bcrypt()
 app = Flask(__name__)
-default_database_path = "postgresql://example:example@localhost:5432/userDB"
-database_path = os.getenv('DATABASE_URL', default_database_path).replace("://", "ql://", 1)
+# default_database_path = "postgresql://example:example@localhost:5432/userDB"
+database_path = os.getenv('DATABASE_URL').replace("://", "ql://", 1)
 conn = psycopg2.connect(database_path, sslmode='require')
 app.config['SQLALCHEMY_DATABASE_URI'] = default_database_path
 app.config['SECRET_KEY'] = "example"
