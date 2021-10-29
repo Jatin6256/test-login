@@ -2,6 +2,7 @@ from flask import Flask, request, session, render_template, redirect, url_for
 from model import db, users
 from flask_bcrypt import Bcrypt
 import os
+import psycopg2
 
 bcrypt = Bcrypt()
 app = Flask(__name__)
